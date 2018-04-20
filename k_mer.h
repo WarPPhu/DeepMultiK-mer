@@ -70,6 +70,7 @@ int k_mer(int k,char fileName[]){
     char *outFile = new char[sizeof(fileName) + 15];
     strcpy(outFile, "tmp/k_mer_");
     strcat(outFile, fileName);
+    strcat(outFile, ".csv");
 
     std::string line;
     std::ifstream myfile(inFile);
