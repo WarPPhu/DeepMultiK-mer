@@ -7,17 +7,6 @@
 //															   
 ///////////////////////////////////////////////////////////////////////////////////////
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <string>
-#include <fstream>
-#include <direct.h>
-#include "cleanFasta.h"
-#include "k_mer.h"
-#include "combined.h"
-#include <iostream>
-
 int main(int argc,char *argv[]){
     printf("\n");
 
@@ -27,10 +16,13 @@ int main(int argc,char *argv[]){
     int n_data;
 
     char file_name_predict[50]="",file_name_lnc[50]="",file_name_pc[50]="";
-
+    int Trmode = 0;
     // set value
     if(argc>1){
         for(int i=0;i<argc;i++){
+            if(!strcmp(argv[i], "-m")){
+                Trmode = atoi(argv[i+1]);
+            }
             if(!strcmp(argv[i], "-l")){
                 strcpy(file_name_lnc,argv[i+1]);
             }
@@ -74,6 +66,6 @@ int main(int argc,char *argv[]){
         }else k_mer(5,"predict");
     }
 
-    genFile(n_train,n_test);
+    if(Trmode==1) genFile(n_train,n_test);
 
 }
