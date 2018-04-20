@@ -19,7 +19,7 @@ n_classes = 2
     
 def main():
     #default
-    predict_file = "PredictK-mer.csv"   
+    predict_file = "tmp/k_mer_predict.csv"     
     out_file = "Predict_Result.csv"
     type = 'Human'
 
