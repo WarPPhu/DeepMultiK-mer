@@ -1,3 +1,12 @@
+///////////////////////////////////////////////////////////////////////////////////////
+//															   
+//  Classification of long non-coding RNAs and messenger RNAs by deep learning method
+//  Authors: Phurinut Chanhom						   		  
+//  Version: 1.0
+//  Updated on: April 20, 2018  
+//															   
+///////////////////////////////////////////////////////////////////////////////////////
+
 #ifndef CLEANFASTA_H_INCLUDED
 #define CLEANFASTA_H_INCLUDED
 #include <iostream>
